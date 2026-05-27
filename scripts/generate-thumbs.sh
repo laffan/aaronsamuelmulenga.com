@@ -9,7 +9,7 @@ SIZE=400
 find "$SRC" -maxdepth 1 -type f -name '*.webp' | while read -r f; do
   name=$(basename "$f")
   mkdir -p "$DEST"
-  magick "$f" -resize "${SIZE}x${SIZE}>" -quality 75 "$DEST/$name"
+  convert "$f" -resize "${SIZE}x${SIZE}>" -quality 75 "$DEST/$name"
 done
 
 for subdir in "$SRC"/exhibitions/*/; do
@@ -19,7 +19,7 @@ for subdir in "$SRC"/exhibitions/*/; do
   mkdir -p "$outdir"
   find "$subdir" -maxdepth 1 -type f -name '*.webp' | while read -r f; do
     name=$(basename "$f")
-    magick "$f" -resize "${SIZE}x${SIZE}>" -quality 75 "$outdir/$name"
+    convert "$f" -resize "${SIZE}x${SIZE}>" -quality 75 "$outdir/$name"
   done
 done
 
