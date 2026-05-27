@@ -52,7 +52,7 @@ permalink: /projects/
                     data-meta="{{ meta }}"
                     {% if project.video %}data-video="{{ project.video | url }}"{% endif %}
                     aria-label="View {{ project.title }}">
-              <img src="/images/{{ project.image }}" alt="{{ project.title }}" loading="lazy">
+              <img src="/images/thumbs/{{ project.image }}" alt="{{ project.title }}" loading="lazy">
               {%- if project.video %}<span class="gallery__play" aria-hidden="true">&#9654;</span>{% endif -%}
             </button>
             {%- if group.key != "Photography" -%}
@@ -83,7 +83,7 @@ permalink: /projects/
                   data-title="{{ project.title }}"
                   data-meta="{{ meta }}"
                   aria-label="View {{ project.title }}">
-            <img src="/images/{{ project.image }}" alt="{{ project.title }}" loading="lazy">
+            <img src="/images/thumbs/{{ project.image }}" alt="{{ project.title }}" loading="lazy">
           </button>
           <figcaption class="gallery__caption">
             <div class="gallery__title">{{ project.title }}</div>

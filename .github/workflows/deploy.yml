@@ -27,6 +27,8 @@ jobs:
       - run: npx @11ty/eleventy
         env:
           ELEVENTY_PATH_PREFIX: /aaronsamuelmulenga.com/
+      - run: sudo apt-get install -y imagemagick
+      - run: bash scripts/generate-thumbs.sh _site
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
