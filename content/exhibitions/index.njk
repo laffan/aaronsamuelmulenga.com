@@ -28,11 +28,11 @@ eleventyExcludeFromCollections: true
       {%- for image in exhibition.images -%}
         <figure class="gallery__item">
           <button type="button" class="gallery__frame" data-lightbox-trigger
-                  data-src="/images/exhibitions/{{ exhibition.slug }}/{{ image }}"
+                  data-src="{{ ('/images/exhibitions/' + exhibition.slug + '/' + image) | url }}"
                   data-title="{{ exhibition.title }}"
                   data-meta=""
                   aria-label="View image {{ loop.index }}">
-            <img src="/images/exhibitions/{{ exhibition.slug }}/{{ image }}" alt="{{ exhibition.title }} — image {{ loop.index }}" loading="lazy">
+            <img src="{{ ('/images/exhibitions/' + exhibition.slug + '/' + image) | url }}" alt="{{ exhibition.title }} — image {{ loop.index }}" loading="lazy">
           </button>
         </figure>
       {%- endfor -%}
