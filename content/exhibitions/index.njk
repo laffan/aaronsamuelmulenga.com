@@ -32,7 +32,7 @@ eleventyExcludeFromCollections: true
                   data-title="{{ exhibition.title }}"
                   data-meta=""
                   aria-label="View image {{ loop.index }}">
-            <img src="{{ ('/images/exhibitions/' + exhibition.slug + '/' + image) | url }}" alt="{{ exhibition.title }} — image {{ loop.index }}" loading="lazy">
+            <img src="/images/exhibitions/{{ exhibition.slug }}/{{ image }}" alt="{{ exhibition.title }} — image {{ loop.index }}" loading="lazy">
           </button>
         </figure>
       {%- endfor -%}
