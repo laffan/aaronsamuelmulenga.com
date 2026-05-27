@@ -1,0 +1,21 @@
+---
+layout: base.njk
+title: News
+section: news
+permalink: /news/
+eleventyExcludeFromCollections: true
+---
+
+<h1 class="page-title">News</h1>
+
+<ul class="entry-list">
+  {%- for item in collections.news | reverse -%}
+    <li class="entry">
+      <p class="entry__date">{{ item.data.date | dateDisplay }}</p>
+      <h2 class="entry__title">{{ item.data.title }}</h2>
+      <div class="entry__body">
+        {{ item.templateContent | safe }}
+      </div>
+    </li>
+  {%- endfor -%}
+</ul>

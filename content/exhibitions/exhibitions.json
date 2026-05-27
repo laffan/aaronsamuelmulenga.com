@@ -1,0 +1,5 @@
+{
+  "tags": ["exhibitions"],
+  "layout": "base.njk",
+  "section": "exhibitions"
+}

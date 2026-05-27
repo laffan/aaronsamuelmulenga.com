@@ -1,0 +1,220 @@
+---
+layout: base.njk
+title: Projects
+section: projects
+permalink: /projects/
+---
+
+<h1 class="page-title">Projects</h1>
+
+<nav class="section-nav" aria-label="Project sections">
+  <ul>
+    {%- for group in [
+      { label: "Tenga Tenga", slug: "tenga-tenga" },
+      { label: "Afronauts", slug: "afronauts" },
+      { label: "Coffee Art", slug: "coffee-art" },
+      { label: "Art Videos", slug: "art-videos" },
+      { label: "Photography", slug: "photography" },
+      { label: "Collected General Works", slug: "collected-general-works" }
+    ] -%}
+      <li><a href="#{{ group.slug }}">{{ group.label }}</a></li>
+    {%- endfor -%}
+  </ul>
+</nav>
+
+{%- set lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." -%}
+{%- set projectGroups = [
+  { key: "Tenga Tenga", label: "Tenga Tenga", desc: lorem },
+  { key: "Afronauts", label: "Afronauts", desc: lorem },
+  { key: "Coffee Art", label: "Coffee Art", desc: lorem },
+  { key: "Art Videos", label: "Art Videos", desc: lorem },
+  { key: "Photography", label: "Photography", desc: lorem }
+] -%}
+
+{%- for group in projectGroups -%}
+  <section class="gallery-section" id="{{ group.label | slug }}">
+    <div class="gallery-section__info">
+      <h2 class="gallery__heading">{{ group.label }}</h2>
+      {%- if group.desc %}<div class="gallery-section__desc">{{ group.desc | safe }}</div>{% endif -%}
+    </div>
+    <div class="gallery{% if group.key == 'Art Videos' %} gallery--video{% endif %}">
+      {%- for project in projects -%}
+        {%- if project.project == group.key and project.image -%}
+          {%- if group.key == "Art Videos" or group.key == "Photography" -%}
+            {%- set meta = "" -%}
+          {%- else -%}
+            {%- set meta = (project.date or "") + (" · " + project.medium if project.medium else "") + (" · " + project.dimensions if project.dimensions else "") -%}
+          {%- endif -%}
+          <figure class="gallery__item" id="{{ project.title | slug }}">
+            <button type="button" class="gallery__frame" data-lightbox-trigger
+                    data-src="/images/{{ project.image }}"
+                    data-title="{{ project.title }}"
+                    data-meta="{{ meta }}"
+                    {% if project.video %}data-video="{{ project.video }}"{% endif %}
+                    aria-label="View {{ project.title }}">
+              <img src="/images/{{ project.image }}" alt="{{ project.title }}" loading="lazy">
+              {%- if project.video %}<span class="gallery__play" aria-hidden="true">&#9654;</span>{% endif -%}
+            </button>
+            {%- if group.key != "Photography" -%}
+            <figcaption class="gallery__caption">
+              <div class="gallery__title">{{ project.title }}</div>
+              <div class="gallery__meta">{{ meta }}</div>
+            </figcaption>
+            {%- endif -%}
+          </figure>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </section>
+{%- endfor -%}
+
+<section class="gallery-section" id="collected-general-works">
+  <div class="gallery-section__info">
+    <h2 class="gallery__heading">Collected General Works</h2>
+    <div class="gallery-section__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+  </div>
+  <div class="gallery">
+    {%- for project in projects -%}
+      {%- if not project.project and project.image -%}
+        {%- set meta = (project.date or "") + (" · " + project.medium if project.medium else "") + (" · " + project.dimensions if project.dimensions else "") -%}
+        <figure class="gallery__item" id="{{ project.title | slug }}">
+          <button type="button" class="gallery__frame" data-lightbox-trigger
+                  data-src="/images/{{ project.image }}"
+                  data-title="{{ project.title }}"
+                  data-meta="{{ meta }}"
+                  aria-label="View {{ project.title }}">
+            <img src="/images/{{ project.image }}" alt="{{ project.title }}" loading="lazy">
+          </button>
+          <figcaption class="gallery__caption">
+            <div class="gallery__title">{{ project.title }}</div>
+            <div class="gallery__meta">{{ meta }}</div>
+          </figcaption>
+        </figure>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</section>
+
+<div class="lightbox" data-lightbox hidden aria-hidden="true" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button type="button" class="lightbox__close" data-lightbox-close aria-label="Close">&times;</button>
+  <button type="button" class="lightbox__nav lightbox__nav--prev" data-lightbox-prev aria-label="Previous image">&larr;</button>
+  <button type="button" class="lightbox__nav lightbox__nav--next" data-lightbox-next aria-label="Next image">&rarr;</button>
+  <figure class="lightbox__figure">
+    <img class="lightbox__image" alt="">
+    <video class="lightbox__video" controls playsinline style="display:none"></video>
+    <figcaption class="lightbox__caption">
+      <div class="lightbox__title"></div>
+      <div class="lightbox__meta"></div>
+    </figcaption>
+  </figure>
+</div>
+
+<script>
+  (function () {
+    var box = document.querySelector('[data-lightbox]');
+    if (!box) return;
+
+    var triggers = Array.prototype.slice.call(
+      document.querySelectorAll('[data-lightbox-trigger]')
+    );
+    var img = box.querySelector('.lightbox__image');
+    var vid = box.querySelector('.lightbox__video');
+    var title = box.querySelector('.lightbox__title');
+    var meta = box.querySelector('.lightbox__meta');
+    var current = -1;
+
+    function show(i) {
+      if (i < 0 || i >= triggers.length) return;
+      current = i;
+      var t = triggers[i];
+      var videoSrc = t.getAttribute('data-video');
+
+      vid.pause();
+
+      if (videoSrc) {
+        img.style.display = 'none';
+        vid.style.display = '';
+        vid.src = videoSrc;
+        img.src = '';
+      } else {
+        vid.style.display = 'none';
+        vid.src = '';
+        img.style.display = '';
+        img.src = t.getAttribute('data-src');
+      }
+
+      img.alt = t.getAttribute('data-title') || '';
+      title.textContent = t.getAttribute('data-title') || '';
+      meta.textContent = t.getAttribute('data-meta') || '';
+    }
+
+    function open(i) {
+      show(i);
+      box.hidden = false;
+      box.setAttribute('aria-hidden', 'false');
+      document.documentElement.style.overflow = 'hidden';
+    }
+
+    function close() {
+      box.hidden = true;
+      box.setAttribute('aria-hidden', 'true');
+      document.documentElement.style.overflow = '';
+      vid.pause();
+      vid.src = '';
+      img.src = '';
+      current = -1;
+    }
+
+    function step(delta) {
+      if (current < 0) return;
+      var next = (current + delta + triggers.length) % triggers.length;
+      show(next);
+    }
+
+    triggers.forEach(function (t, i) {
+      t.addEventListener('click', function () { open(i); });
+    });
+
+    box.querySelector('[data-lightbox-close]').addEventListener('click', close);
+    box.querySelector('[data-lightbox-prev]').addEventListener('click', function () { step(-1); });
+    box.querySelector('[data-lightbox-next]').addEventListener('click', function () { step(1); });
+
+    box.addEventListener('click', function (e) {
+      if (e.target === box) close();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (box.hidden) return;
+      if (e.key === 'Escape') close();
+      else if (e.key === 'ArrowLeft') step(-1);
+      else if (e.key === 'ArrowRight') step(1);
+    });
+  })();
+</script>
+
+<script>
+  (function () {
+    var sections = Array.prototype.slice.call(document.querySelectorAll('.gallery-section[id]'));
+    var links = document.querySelectorAll('.section-nav a');
+    if (!sections.length || !links.length) return;
+
+    function activate(id) {
+      links.forEach(function (l) {
+        if (l.getAttribute('href') === '#' + id) l.classList.add('is-active');
+        else l.classList.remove('is-active');
+      });
+    }
+
+    function onScroll() {
+      var offset = window.scrollY + 80;
+      var current = sections[0].id;
+      for (var i = 0; i < sections.length; i++) {
+        if (sections[i].offsetTop <= offset) current = sections[i].id;
+      }
+      activate(current);
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  })();
+</script>

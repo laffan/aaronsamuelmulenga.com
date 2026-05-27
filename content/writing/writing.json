@@ -1,0 +1,6 @@
+{
+  "tags": ["writing"],
+  "layout": "base.njk",
+  "section": "writing",
+  "eleventyExcludeFromCollections": false
+}

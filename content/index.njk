@@ -1,0 +1,39 @@
+---
+layout: base.njk
+section: home
+permalink: /
+featured:
+  - pillars.png
+  - afronaut-jojo.webp
+  - intanda-nga-shakumana-when-the-stars-meet.png
+  - past-the-threshold.png
+---
+
+<div class="slideshow" data-slideshow data-interval="5000" aria-label="Featured works">
+  {%- for filename in featured -%}
+    {%- set project = projects | findByImage(filename) -%}
+    {%- if project -%}
+      <div class="slideshow__slide{% if loop.first %} is-active{% endif %}">
+        <a href="/projects/#{{ project.title | slug }}" aria-label="{{ project.title }}">
+          <img src="/images/{{ project.image }}" alt="{{ project.title }}"{% if not loop.first %} loading="lazy"{% endif %}>
+        </a>
+      </div>
+    {%- endif -%}
+  {%- endfor -%}
+</div>
+
+<script>
+  (function () {
+    var root = document.querySelector('[data-slideshow]');
+    if (!root) return;
+    var slides = root.querySelectorAll('.slideshow__slide');
+    if (slides.length < 2) return;
+    var interval = parseInt(root.getAttribute('data-interval'), 10) || 5000;
+    var i = 0;
+    setInterval(function () {
+      slides[i].classList.remove('is-active');
+      i = (i + 1) % slides.length;
+      slides[i].classList.add('is-active');
+    }, interval);
+  })();
+</script>

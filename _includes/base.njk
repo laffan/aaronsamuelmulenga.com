@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if title %}{{ title }} — {% endif %}Aaron Samuel Mulenga</title>
+  <meta name="description" content="{{ description or 'Aaron Samuel Mulenga — Visual Artist.' }}">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="page page--{{ section or 'home' }}">
+  <header class="site-header">
+    <a class="site-title" href="/">
+      <span class="site-title__name">AARON SAMUEL MULENGA</span>
+      <span class="site-title__role">Visual Artist</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="/projects/" {% if section == "projects" %}aria-current="page"{% endif %}>Projects</a></li>
+        <li><a href="/news/" {% if section == "news" %}aria-current="page"{% endif %}>News</a></li>
+        <li><a href="/writing/" {% if section == "writing" %}aria-current="page"{% endif %}>Writing</a></li>
+        <li><a href="/about/" {% if section == "about" %}aria-current="page"{% endif %}>About</a></li>
+        <li><a href="/exhibitions/" {% if section == "exhibitions" %}aria-current="page"{% endif %}>Exhibitions</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="site-main">
+    {{ content | safe }}
+  </main>
+  <footer class="site-footer">
+    <small>&copy; {{ page.date.getFullYear() }} Aaron Samuel Mulenga</small>
+  </footer>
+</body>
+</html>

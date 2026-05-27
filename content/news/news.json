@@ -1,0 +1,6 @@
+{
+  "tags": ["news"],
+  "layout": "base.njk",
+  "section": "news",
+  "eleventyExcludeFromCollections": false
+}

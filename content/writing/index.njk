@@ -1,0 +1,27 @@
+---
+layout: base.njk
+title: Writing
+section: writing
+permalink: /writing/
+eleventyExcludeFromCollections: true
+---
+
+<h1 class="page-title">Writing</h1>
+
+<ul class="entry-list">
+  {%- for item in collections.writing | reverse -%}
+    <li class="entry">
+      <p class="entry__date">{{ item.data.date | dateDisplay }}</p>
+      <h2 class="entry__title">
+        {%- if item.data.link -%}
+          <a href="{{ item.data.link }}">{{ item.data.title }}</a>
+        {%- else -%}
+          {{ item.data.title }}
+        {%- endif -%}
+      </h2>
+      <div class="entry__body">
+        {{ item.templateContent | safe }}
+      </div>
+    </li>
+  {%- endfor -%}
+</ul>

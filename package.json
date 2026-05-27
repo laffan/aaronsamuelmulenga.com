@@ -1,0 +1,14 @@
+{
+  "name": "aaronsamuelmulenga.com",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Portfolio site for visual artist Aaron Samuel Mulenga.",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "clean": "rm -rf _site"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

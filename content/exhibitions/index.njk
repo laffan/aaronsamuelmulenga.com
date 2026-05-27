@@ -1,0 +1,146 @@
+---
+layout: base.njk
+title: Exhibitions
+section: exhibitions
+permalink: /exhibitions/
+eleventyExcludeFromCollections: true
+---
+
+<h1 class="page-title">Exhibitions</h1>
+
+<nav class="section-nav" aria-label="Exhibition sections">
+  <ul>
+    {%- for exhibition in exhibitions -%}
+      <li><a href="#{{ exhibition.slug }}">{{ exhibition.title }}</a></li>
+    {%- endfor -%}
+  </ul>
+</nav>
+
+{%- for exhibition in exhibitions -%}
+  <section class="gallery-section" id="{{ exhibition.slug }}">
+    <div class="gallery-section__info">
+      <h2 class="gallery__heading">{{ exhibition.title }}</h2>
+      {%- if exhibition.venue %}<p class="gallery-section__venue">{{ exhibition.venue }}</p>{% endif -%}
+      {%- if exhibition.date %}<p class="gallery-section__venue">{{ exhibition.date }}</p>{% endif -%}
+      {%- if exhibition.description %}<div class="gallery-section__desc">{{ exhibition.description }}</div>{% endif -%}
+    </div>
+    <div class="gallery">
+      {%- for image in exhibition.images -%}
+        <figure class="gallery__item">
+          <button type="button" class="gallery__frame" data-lightbox-trigger
+                  data-src="/images/exhibitions/{{ exhibition.slug }}/{{ image }}"
+                  data-title="{{ exhibition.title }}"
+                  data-meta=""
+                  aria-label="View image {{ loop.index }}">
+            <img src="/images/exhibitions/{{ exhibition.slug }}/{{ image }}" alt="{{ exhibition.title }} — image {{ loop.index }}" loading="lazy">
+          </button>
+        </figure>
+      {%- endfor -%}
+    </div>
+  </section>
+{%- endfor -%}
+
+<div class="lightbox" data-lightbox hidden aria-hidden="true" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button type="button" class="lightbox__close" data-lightbox-close aria-label="Close">&times;</button>
+  <button type="button" class="lightbox__nav lightbox__nav--prev" data-lightbox-prev aria-label="Previous image">&larr;</button>
+  <button type="button" class="lightbox__nav lightbox__nav--next" data-lightbox-next aria-label="Next image">&rarr;</button>
+  <figure class="lightbox__figure">
+    <img class="lightbox__image" alt="">
+    <figcaption class="lightbox__caption">
+      <div class="lightbox__title"></div>
+      <div class="lightbox__meta"></div>
+    </figcaption>
+  </figure>
+</div>
+
+<script>
+  (function () {
+    var box = document.querySelector('[data-lightbox]');
+    if (!box) return;
+
+    var triggers = Array.prototype.slice.call(
+      document.querySelectorAll('[data-lightbox-trigger]')
+    );
+    var img = box.querySelector('.lightbox__image');
+    var title = box.querySelector('.lightbox__title');
+    var meta = box.querySelector('.lightbox__meta');
+    var current = -1;
+
+    function show(i) {
+      if (i < 0 || i >= triggers.length) return;
+      current = i;
+      var t = triggers[i];
+      img.src = t.getAttribute('data-src');
+      img.alt = t.getAttribute('data-title') || '';
+      title.textContent = t.getAttribute('data-title') || '';
+      meta.textContent = t.getAttribute('data-meta') || '';
+    }
+
+    function open(i) {
+      show(i);
+      box.hidden = false;
+      box.setAttribute('aria-hidden', 'false');
+      document.documentElement.style.overflow = 'hidden';
+    }
+
+    function close() {
+      box.hidden = true;
+      box.setAttribute('aria-hidden', 'true');
+      document.documentElement.style.overflow = '';
+      img.src = '';
+      current = -1;
+    }
+
+    function step(delta) {
+      if (current < 0) return;
+      var next = (current + delta + triggers.length) % triggers.length;
+      show(next);
+    }
+
+    triggers.forEach(function (t, i) {
+      t.addEventListener('click', function () { open(i); });
+    });
+
+    box.querySelector('[data-lightbox-close]').addEventListener('click', close);
+    box.querySelector('[data-lightbox-prev]').addEventListener('click', function () { step(-1); });
+    box.querySelector('[data-lightbox-next]').addEventListener('click', function () { step(1); });
+
+    box.addEventListener('click', function (e) {
+      if (e.target === box) close();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (box.hidden) return;
+      if (e.key === 'Escape') close();
+      else if (e.key === 'ArrowLeft') step(-1);
+      else if (e.key === 'ArrowRight') step(1);
+    });
+  })();
+</script>
+
+<script>
+  (function () {
+    var sections = Array.prototype.slice.call(document.querySelectorAll('.gallery-section[id]'));
+    var links = document.querySelectorAll('.section-nav a');
+    if (!sections.length || !links.length) return;
+
+    function activate(id) {
+      links.forEach(function (l) {
+        if (l.getAttribute('href') === '#' + id) l.classList.add('is-active');
+        else l.classList.remove('is-active');
+      });
+    }
+
+    function onScroll() {
+      var offset = window.scrollY + 80;
+      var current = sections[0].id;
+      for (var i = 0; i < sections.length; i++) {
+        if (sections[i].offsetTop <= offset) current = sections[i].id;
+      }
+      activate(current);
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  })();
+</script>
