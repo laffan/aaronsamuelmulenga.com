@@ -1,0 +1,22 @@
+---
+layout: base.njk
+title: Thumbnails
+section: thumbnails
+permalink: /thumbnails/
+---
+
+<h1 class="page-title">Thumbnails</h1>
+
+{%- for key, items in images | groupby("group") -%}
+  <section class="thumb-section">
+    <h2 class="thumb-section__heading">{{ key or "Images" }}</h2>
+    <div class="thumb-grid">
+      {%- for image in items -%}
+        <a class="thumb-grid__item" href="{{ image.src | url }}">
+          <img class="thumb-grid__image" src="{{ image.thumb | url }}" alt="{{ image.name }}" loading="lazy">
+          <span class="thumb-grid__name">{{ image.name }}</span>
+        </a>
+      {%- endfor -%}
+    </div>
+  </section>
+{%- endfor -%}
