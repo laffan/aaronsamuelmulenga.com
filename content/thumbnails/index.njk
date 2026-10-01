@@ -12,8 +12,8 @@ permalink: /thumbnails/
     <h2 class="thumb-section__heading">{{ key or "Images" }}</h2>
     <div class="thumb-grid">
       {%- for image in items -%}
-        <a class="thumb-grid__item" href="{{ image.src | url }}">
-          <img class="thumb-grid__image" src="{{ image.thumb | url }}" alt="{{ image.name }}" loading="lazy">
+        <a class="thumb-grid__item" href="{{ image.src }}">
+          <img class="thumb-grid__image" src="{{ image.thumb }}" alt="{{ image.name }}" loading="lazy">
           <span class="thumb-grid__name">{{ image.name }}</span>
         </a>
       {%- endfor -%}
