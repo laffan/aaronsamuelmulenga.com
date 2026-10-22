@@ -22,13 +22,22 @@ permalink: /projects/
   </ul>
 </nav>
 
+{%- set tenga = "I make work from the absence I felt as a child copying a family Bible whose images looked nothing like me. I now research Zambian histories left out of textbooks, like the Tenga Tenga, African porters of World War I. Through performance, burlap, and chitenge, I carry their memory through Mbala, asking whose history is told." -%}
+
+{%- set afronauts = "Ukupupuka means flight in Bemba. I excavate the stories of marginalized Africans who shaped moments like the First World War, imagining futures through a Black African lens, so past, present, and future flow together. My Afronauts, descended from Nkoloso’s Zambian Space Program, wear halos, not helmets, countering mainstream Christian iconography." -%}
+
+{%- set coffee = "In a planned installation of sculpture, image, and sound, I turn to Mbusa, a Bemba marriage ritual from Zambia. Working in acrylic and coffee on canvas, I ask how African culture and technology shape our understanding of the world, looking back toward ancestral practices." -%}
+
+{%- set video = "" -%}
+{%- set photo = "" -%}
+
 {%- set lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." -%}
 {%- set projectGroups = [
-  { key: "Tenga Tenga", label: "Tenga Tenga", desc: lorem },
-  { key: "Afronauts", label: "Afronauts", desc: lorem },
-  { key: "Coffee Art", label: "Coffee Art", desc: lorem },
-  { key: "Art Videos", label: "Art Videos", desc: lorem },
-  { key: "Photography", label: "Photography", desc: lorem }
+  { key: "Tenga Tenga", label: "Tenga Tenga", desc: tenga },
+  { key: "Afronauts", label: "Afronauts", desc: afronauts },
+  { key: "Coffee Art", label: "Coffee Art", desc: coffee },
+  { key: "Art Videos", label: "Art Videos", desc: video },
+  { key: "Photography", label: "Photography", desc: photo }
 ] -%}
 
 {%- for group in projectGroups -%}
@@ -94,6 +103,8 @@ permalink: /projects/
     {%- endfor -%}
   </div>
 </section>
+
+<script src="/gallery-more.js"></script>
 
 <div class="lightbox" data-lightbox hidden aria-hidden="true" role="dialog" aria-modal="true" aria-label="Image viewer">
   <button type="button" class="lightbox__close" data-lightbox-close aria-label="Close">&times;</button>

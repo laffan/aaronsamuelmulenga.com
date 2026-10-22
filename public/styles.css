@@ -344,6 +344,34 @@ img {
   outline-offset: 2px;
 }
 
+.gallery__item--hidden {
+  display: none;
+}
+
+.gallery-more {
+  grid-column: -2 / -1;
+  justify-self: center;
+  border: 0;
+  padding: 0.25rem 0;
+  background: transparent;
+  font: inherit;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.gallery-more:hover {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.gallery-more[hidden] {
+  display: none;
+}
+
 /* ---------- Lightbox ---------- */
 
 .lightbox {
