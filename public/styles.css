@@ -559,6 +559,12 @@ img {
   margin-bottom: 0;
 }
 
+.entry__body a {
+  text-decoration: underline;
+  text-decoration-color: var(--muted);
+  text-underline-offset: 3px;
+}
+
 /* ---------- Exhibition listing ---------- */
 
 .exhibition-list {
