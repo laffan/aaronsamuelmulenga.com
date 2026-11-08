@@ -14,7 +14,8 @@ featured:
     {%- set project = projects | findByImage(filename) -%}
     {%- if project -%}
       <div class="slideshow__slide{% if loop.first %} is-active{% endif %}">
-        <a href="/projects/#{{ project.title | slug }}" aria-label="{{ project.title }}">
+        {#- Works without a project group are shown in the Ukupupuka exhibition, not on the Projects page. -#}
+        <a href="{% if project.project %}/projects/#{{ project.title | slug }}{% else %}/exhibitions/#ukupupuka{% endif %}" aria-label="{{ project.title }}">
           <img src="/images/{{ project.image }}" alt="{{ project.title }}"{% if not loop.first %} loading="lazy"{% endif %}>
         </a>
       </div>

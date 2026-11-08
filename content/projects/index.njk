@@ -13,9 +13,7 @@ permalink: /projects/
       { label: "Tenga Tenga", slug: "tenga-tenga" },
       { label: "Afronauts", slug: "afronauts" },
       { label: "Coffee Art", slug: "coffee-art" },
-      { label: "Art Videos", slug: "art-videos" },
-      { label: "Photography", slug: "photography" },
-      { label: "Collected General Works", slug: "collected-general-works" }
+      { label: "Art Videos", slug: "art-videos" }
     ] -%}
       <li><a href="#{{ group.slug }}">{{ group.label }}</a></li>
     {%- endfor -%}
@@ -29,15 +27,11 @@ permalink: /projects/
 {%- set coffee = "In a planned installation of sculpture, image, and sound, I turn to Mbusa, a Bemba marriage ritual from Zambia. Working in acrylic and coffee on canvas, I ask how African culture and technology shape our understanding of the world, looking back toward ancestral practices." -%}
 
 {%- set video = "" -%}
-{%- set photo = "" -%}
-
-{%- set lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." -%}
 {%- set projectGroups = [
   { key: "Tenga Tenga", label: "Tenga Tenga", desc: tenga },
   { key: "Afronauts", label: "Afronauts", desc: afronauts },
   { key: "Coffee Art", label: "Coffee Art", desc: coffee },
-  { key: "Art Videos", label: "Art Videos", desc: video },
-  { key: "Photography", label: "Photography", desc: photo }
+  { key: "Art Videos", label: "Art Videos", desc: video }
 ] -%}
 
 {%- for group in projectGroups -%}
@@ -49,7 +43,7 @@ permalink: /projects/
     <div class="gallery{% if group.key == 'Art Videos' %} gallery--video{% endif %}">
       {%- for project in projects -%}
         {%- if project.project == group.key and project.image -%}
-          {%- if group.key == "Art Videos" or group.key == "Photography" -%}
+          {%- if group.key == "Art Videos" -%}
             {%- set meta = "" -%}
           {%- else -%}
             {%- set meta = (project.date or "") + (" · " + project.medium if project.medium else "") + (" · " + project.dimensions if project.dimensions else "") -%}
@@ -64,45 +58,16 @@ permalink: /projects/
               <img src="/images/thumbs/{{ project.image }}" alt="{{ project.title }}" loading="lazy">
               {%- if project.video %}<span class="gallery__play" aria-hidden="true">&#9654;</span>{% endif -%}
             </button>
-            {%- if group.key != "Photography" -%}
             <figcaption class="gallery__caption">
               <div class="gallery__title">{{ project.title }}</div>
               <div class="gallery__meta">{{ meta }}</div>
             </figcaption>
-            {%- endif -%}
           </figure>
         {%- endif -%}
       {%- endfor -%}
     </div>
   </section>
 {%- endfor -%}
-
-<section class="gallery-section" id="collected-general-works">
-  <div class="gallery-section__info">
-    <h2 class="gallery__heading">Collected General Works</h2>
-    <div class="gallery-section__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-  </div>
-  <div class="gallery">
-    {%- for project in projects -%}
-      {%- if not project.project and project.image -%}
-        {%- set meta = (project.date or "") + (" · " + project.medium if project.medium else "") + (" · " + project.dimensions if project.dimensions else "") -%}
-        <figure class="gallery__item" id="{{ project.title | slug }}">
-          <button type="button" class="gallery__frame" data-lightbox-trigger
-                  data-src="{{ ('/images/' + project.image) | url }}"
-                  data-title="{{ project.title }}"
-                  data-meta="{{ meta }}"
-                  aria-label="View {{ project.title }}">
-            <img src="/images/thumbs/{{ project.image }}" alt="{{ project.title }}" loading="lazy">
-          </button>
-          <figcaption class="gallery__caption">
-            <div class="gallery__title">{{ project.title }}</div>
-            <div class="gallery__meta">{{ meta }}</div>
-          </figcaption>
-        </figure>
-      {%- endif -%}
-    {%- endfor -%}
-  </div>
-</section>
 
 <script src="/gallery-more.js"></script>
 
