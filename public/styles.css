@@ -165,6 +165,38 @@ img {
   object-fit: contain;
 }
 
+.slideshow__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  background: transparent;
+  border: 0;
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 1.6rem;
+  line-height: 1;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+}
+
+.slideshow__nav:hover {
+  opacity: 0.55;
+}
+
+.slideshow__nav:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.slideshow__nav--prev { left: -3rem; }
+.slideshow__nav--next { right: -3rem; }
+
+@media (max-width: 1000px) {
+  .slideshow__nav--prev { left: 0; }
+  .slideshow__nav--next { right: 0; }
+}
+
 /* ---------- Section nav ---------- */
 
 .section-nav {
