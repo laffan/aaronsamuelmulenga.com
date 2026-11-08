@@ -240,7 +240,7 @@ img {
 
 .gallery-section {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 4fr;
   gap: 2rem;
   margin-bottom: 3rem;
   padding-bottom: 3rem;
@@ -323,8 +323,8 @@ img {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
-  gap: 3rem 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem 1.25rem;
 }
 
 .gallery--video {
@@ -387,7 +387,7 @@ img {
 }
 
 .gallery__caption {
-  margin-top: 0.85rem;
+  margin-top: 0.6rem;
   font-size: 0.82rem;
   line-height: 1.45;
 }
