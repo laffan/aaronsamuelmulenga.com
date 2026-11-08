@@ -1,5 +1,20 @@
 [
   {
+    "title": "Ukupupuka",
+    "slug": "ukupupuka",
+    "date": "2025",
+    "venue": "",
+    "description": "Ukupupuka means flight in Bemba. In this show, I seek visual avenues of elevation that carry us past our physical limits. I excavate the histories of marginalized Africans and envision the future through a Black African lens, letting past, present, and future flow together. Transcendence lets me inhabit all three.",
+    "images": [
+      "01.webp", "02.webp", "03.webp", "04.webp", "05.webp",
+      "06.webp", "07.webp", "08.webp", "09.webp", "10.webp",
+      "11.webp", "12.webp", "13.webp", "14.webp", "15.webp",
+      "16.webp", "17.webp", "18.webp", "19.webp", "20.webp",
+      "21.webp", "22.webp", "23.webp", "24.webp", "25.webp",
+      "26.webp", "27.webp", "28.webp", "29.webp"
+    ]
+  },
+  {
     "title": "Simple Commodities",
     "slug": "simple-commodities",
     "date": "2024",
@@ -15,21 +30,6 @@
       "31.webp", "32.webp", "33.webp", "34.webp", "35.webp",
       "36.webp", "37.webp", "38.webp", "39.webp", "40.webp",
       "41.webp"
-    ]
-  },
-  {
-    "title": "Ukupupuka",
-    "slug": "ukupupuka",
-    "date": "2025",
-    "venue": "",
-    "description": "Ukupupuka means flight in Bemba. In this show, I seek visual avenues of elevation that carry us past our physical limits. I excavate the histories of marginalized Africans and envision the future through a Black African lens, letting past, present, and future flow together. Transcendence lets me inhabit all three.",
-    "images": [
-      "01.webp", "02.webp", "03.webp", "04.webp", "05.webp",
-      "06.webp", "07.webp", "08.webp", "09.webp", "10.webp",
-      "11.webp", "12.webp", "13.webp", "14.webp", "15.webp",
-      "16.webp", "17.webp", "18.webp", "19.webp", "20.webp",
-      "21.webp", "22.webp", "23.webp", "24.webp", "25.webp",
-      "26.webp", "27.webp", "28.webp", "29.webp"
     ]
   }
 ]
