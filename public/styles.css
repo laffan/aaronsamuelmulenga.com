@@ -281,6 +281,33 @@ img {
   margin: 0 0 0.8rem;
 }
 
+.read-more summary {
+  list-style: none;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 0 0.8rem;
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.read-more summary::-webkit-details-marker {
+  display: none;
+}
+
+.read-more summary:hover {
+  opacity: 0.55;
+}
+
+.read-more__close,
+.read-more[open] .read-more__open {
+  display: none;
+}
+
+.read-more[open] .read-more__close {
+  display: inline;
+}
+
 .gallery-section__credit {
   font-style: italic;
 }
