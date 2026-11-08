@@ -281,6 +281,10 @@ img {
   margin: 0 0 0.8rem;
 }
 
+.gallery-section__credit {
+  font-style: italic;
+}
+
 @media (max-width: 760px) {
   .gallery-section {
     grid-template-columns: 1fr;

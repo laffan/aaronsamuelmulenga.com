@@ -20,9 +20,19 @@ eleventyExcludeFromCollections: true
   <section class="gallery-section" id="{{ exhibition.slug }}">
     <div class="gallery-section__info">
       <h2 class="gallery__heading">{{ exhibition.title }}</h2>
+      {%- if exhibition.subtitle %}<p class="gallery-section__venue">{{ exhibition.subtitle }}</p>{% endif -%}
       {%- if exhibition.venue %}<p class="gallery-section__venue">{{ exhibition.venue }}</p>{% endif -%}
       {%- if exhibition.date %}<p class="gallery-section__venue">{{ exhibition.date }}</p>{% endif -%}
-      {%- if exhibition.description %}<div class="gallery-section__desc">{{ exhibition.description }}</div>{% endif -%}
+      {%- if exhibition.description -%}
+        <div class="gallery-section__desc">
+          {%- if exhibition.description is string -%}
+            {{ exhibition.description }}
+          {%- else -%}
+            {%- for para in exhibition.description %}<p>{{ para }}</p>{% endfor -%}
+          {%- endif -%}
+          {%- if exhibition.credit %}<p class="gallery-section__credit">&ndash; {{ exhibition.credit }}</p>{% endif -%}
+        </div>
+      {%- endif -%}
     </div>
     <div class="gallery">
       {%- for image in exhibition.images -%}
