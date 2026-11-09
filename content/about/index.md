@@ -11,11 +11,13 @@ portrait: /images/aaron-portrait.webp
 <div class="about">
   <div class="prose">
 
-Aaron Samuel Mulenga is a Zambian visual artist whose practice spans painting, sculpture, photography, and installation. His work investigates memory, colonial legacy, and the quiet rituals through which communities carry their histories forward.
+Aaron Samuel Mulenga is a Zambian visual artist whose practice spans installation, sculpture, coffee painting, and drawings. His practice investigates cultural memory, speculative imaginations of the future, and how shared communities create environments of care that center love, equity and hope for the future.
 
-Working primarily with coffee, bronze, burlap, and found material, Mulenga draws on the textures of everyday Zambian life — and on the long shadows cast by empire — to compose images that are at once intimate and historical.
+Mulenga’s work is directly inspired by Zambia’s vibrant culture and rich history. His 2D work incorporates collage, painting and drawing by using coffee and African print fabric on burlap and canvas. Mulenga’s sculptures and installations are made in bronze, wood, and found material, reminiscent of the bricolage practices found in masquerade practices in the country.
 
-He has exhibited in Lusaka, Berlin, and across the United States, and continues to develop bodies of work that pair archival research with material experimentation.
+Mulenga's work seeks to foreground little known Zambian narratives such as in the work of the Zambian WWI porters, and Zambian space explorers, which he explores in his Tenga-Tenga and Afronauts series respectively.
+
+Mulenga has exhibited in Lusaka, Berlin, and across the United States, and continues to develop bodies of work that pair archival research with material experimentation.
 
   </div>
   <aside class="about__portrait">

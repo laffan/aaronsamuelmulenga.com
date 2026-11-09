@@ -125,18 +125,18 @@
     "image": "tengatenga-can-i-help-you-carry-your-load.webp"
   },
   {
-    "title": "The Afronauts",
+    "title": "Afronaut Mwamba",
     "project": "Afronauts",
-    "date": null,
-    "medium": "Acrylic, wax cloth on burlap",
-    "dimensions": null,
-    "image": "the-afronauts.webp"
+    "date": "2017",
+    "medium": "Acrylic paint, wax cloth, burlap sack",
+    "dimensions": "39 x 48\"",
+    "image": "afronaut-mwamba.webp"
   },
   {
     "title": "Afronaut Lombe",
     "project": "Afronauts",
     "date": "2020",
-    "medium": "Acrylic, wax cloth on burlap",
+    "medium": "Acrylic paint, wax cloth, burlap sack",
     "dimensions": "35 x 47\"",
     "image": "afronaut-lombe.webp"
   },
@@ -144,9 +144,33 @@
     "title": "Afronaut Jojo",
     "project": "Afronauts",
     "date": "2021",
-    "medium": "Acrylic, wax cloth on burlap",
+    "medium": "Acrylic paint, wax cloth, burlap sack",
     "dimensions": "39 x 48\"",
     "image": "afronaut-jojo.webp"
+  },
+  {
+    "title": "Flight Is Better When Done in Tandem",
+    "project": "Afronauts",
+    "date": "2019",
+    "medium": "Fiber filling, burlap sack, coffee and acrylic paint",
+    "dimensions": "87 x 81\"",
+    "image": "flight-is-better-when-done-in-tandem.webp"
+  },
+  {
+    "title": "From the Ground Up! Ulubuto",
+    "project": "Afronauts",
+    "date": "2021",
+    "medium": "Coffee and acrylic paint on canvas",
+    "dimensions": "71 x 51\"",
+    "image": "from-the-ground-up-ulubuto.webp"
+  },
+  {
+    "title": "The Afronauts",
+    "project": "Afronauts",
+    "date": "2020",
+    "medium": "Digital artwork",
+    "dimensions": null,
+    "image": "the-afronauts.webp"
   },
   {
     "title": "Afronaut Chintelelwe",
@@ -157,22 +181,6 @@
     "image": "afronaut-chintelelwe.webp"
   },
   {
-    "title": "Afronaut Mwamba",
-    "project": "Afronauts",
-    "date": null,
-    "medium": "Acrylic, wax cloth on burlap",
-    "dimensions": null,
-    "image": "afronaut-mwamba.webp"
-  },
-  {
-    "title": "Flight is Better When Done in Tandem",
-    "project": "Afronauts",
-    "date": null,
-    "medium": "Acrylic, wax cloth on burlap",
-    "dimensions": null,
-    "image": "flight-is-better-when-done-in-tandem.webp"
-  },
-  {
     "title": "For Freedom We Dream Until It Happens",
     "project": "Afronauts",
     "date": null,
@@ -181,28 +189,20 @@
     "image": "for-freedom-we-dream-until-it-happens.webp"
   },
   {
-    "title": "From the Ground Up! Ulubuto",
-    "project": "Afronauts",
-    "date": null,
-    "medium": "Acrylic, wax cloth on burlap",
-    "dimensions": null,
-    "image": "from-the-ground-up-ulubuto.webp"
-  },
-  {
-    "title": "Untitled (Afronaut Interaction)",
-    "project": "Afronauts",
-    "date": null,
-    "medium": null,
-    "dimensions": null,
-    "image": "untitled-afronaut-interaction.webp"
-  },
-  {
     "title": "W.I.T.C.H Album Cover",
     "project": "Afronauts",
     "date": null,
     "medium": "Acrylic, wax cloth on burlap",
     "dimensions": null,
     "image": "witch-album-cover.webp"
+  },
+  {
+    "title": "Pillars",
+    "project": "Afronauts",
+    "date": "2023",
+    "medium": "Acrylic and wax cloth on burlap",
+    "dimensions": "97 x 81\"",
+    "image": "pillars.webp"
   },
   {
     "title": "Intanda Nga Shakumana (When the Stars Meet)",
@@ -418,14 +418,6 @@
     "image": "photography-10.webp"
   },
   {
-    "title": "Pillars",
-    "project": "Afronauts",
-    "date": "2023",
-    "medium": "Acrylic and wax cloth on burlap",
-    "dimensions": "97 x 81\"",
-    "image": "pillars.webp"
-  },
-  {
     "title": "Penance",
     "project": null,
     "date": "2024",
@@ -448,14 +440,6 @@
     "medium": "Bronze, wood",
     "dimensions": "23 1/4 x 27 x 13.5\"",
     "image": "ulupwa.webp"
-  },
-  {
-    "title": "Afronaut Banana",
-    "project": "Afronauts",
-    "date": "2024",
-    "medium": "Bronze",
-    "dimensions": null,
-    "image": "afronaut-banana.webp"
   },
   {
     "title": "Matthew 10:16 (Sheep in Wolf's Clothing)",

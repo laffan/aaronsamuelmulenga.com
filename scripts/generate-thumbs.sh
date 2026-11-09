@@ -4,7 +4,7 @@ set -euo pipefail
 SITE_DIR="${1:-_site}"
 SRC="$SITE_DIR/images"
 DEST="$SITE_DIR/images/thumbs"
-SIZE=400
+SIZE=800
 
 find "$SRC" -maxdepth 1 -type f -name '*.webp' | while read -r f; do
   name=$(basename "$f")
