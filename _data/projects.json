@@ -149,12 +149,28 @@
     "image": "afronaut-jojo.webp"
   },
   {
+    "title": "Afronaut Chikuza",
+    "project": "Afronauts",
+    "date": "2026",
+    "medium": "Acrylic paint, wax cloth, burlap sack",
+    "dimensions": "37 x 50\"",
+    "image": "afronaut-chikuza.webp"
+  },
+  {
     "title": "Flight Is Better When Done in Tandem",
     "project": "Afronauts",
     "date": "2019",
     "medium": "Fiber filling, burlap sack, coffee and acrylic paint",
     "dimensions": "87 x 81\"",
     "image": "flight-is-better-when-done-in-tandem.webp"
+  },
+  {
+    "title": "Maki x Mai",
+    "project": "Afronauts",
+    "date": "2026",
+    "medium": "Acrylic paint on paper",
+    "dimensions": null,
+    "image": "maki-x-mai.webp"
   },
   {
     "title": "From the Ground Up! Ulubuto",
