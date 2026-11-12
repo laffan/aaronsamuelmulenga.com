@@ -27,13 +27,13 @@
     "image": "freedom-revising-the-intercontinental-memory-of-war.webp"
   },
   {
-    "title": "Remembering the TengaTenga (Lusaka Cenotaph)",
+    "title": "War is a Terrible Thing. Forgotten but Not Neglected",
     "project": "Tenga Tenga",
-    "date": "2023",
+    "date": "2024",
     "medium": "Photograph on Epson Paper",
     "dimensions": "24 x 36",
-    "photographer": "Maingaila Muvundika",
-    "image": "remembering-the-tengatenga-lusaka-cenotaph.webp"
+    "photographer": "Saul Villegas of Moderno",
+    "image": "war-is-a-terrible-thing-forgotten-but-not-neglected.webp"
   },
   {
     "title": "I Will Continue to Cross the Oceans Until I am Known",
@@ -45,13 +45,22 @@
     "image": "i-will-continue-to-cross-the-oceans-until-i-am-known.webp"
   },
   {
-    "title": "A Moment of Silence. Though Lost You Are Not Forgotten",
+    "title": "Remembering the TengaTenga (Lusaka Cenotaph)",
     "project": "Tenga Tenga",
-    "date": "2022",
+    "date": "2023",
     "medium": "Photograph on Epson Paper",
     "dimensions": "24 x 36",
-    "photographer": "Joseph K. Kasau Wa Mambwe",
-    "image": "a-moment-of-silence-though-lost-you-are-not-forgotten.webp"
+    "photographer": "Maingaila Muvundika",
+    "image": "remembering-the-tengatenga-lusaka-cenotaph.webp"
+  },
+  {
+    "title": "We Toil For a Brighter Tomorrow",
+    "project": "Tenga Tenga",
+    "date": "2024",
+    "medium": "Photograph on Epson Paper",
+    "dimensions": "24 x 36",
+    "photographer": "Saul Villegas of Moderno",
+    "image": "we-toil-for-a-brighter-tomorrow.webp"
   },
   {
     "title": "Life Renewed (We all deserve to Dream)",
@@ -63,6 +72,15 @@
     "image": "life-renewed-we-all-deserve-to-dream.webp"
   },
   {
+    "title": "Nocturnal",
+    "project": "Tenga Tenga",
+    "date": "2024",
+    "medium": "Photograph on Epson Paper",
+    "dimensions": "24 x 36",
+    "photographer": "Saul Villegas of Moderno",
+    "image": "nocturnal.webp"
+  },
+  {
     "title": "Victory Colum I (Who Really Won the War)",
     "project": "Tenga Tenga",
     "date": "2023",
@@ -70,15 +88,6 @@
     "dimensions": "24 x 36",
     "photographer": "Aaron Samuel Mulenga",
     "image": "victory-colum-i-who-really-won-the-war.webp"
-  },
-  {
-    "title": "Victory Colum II (Who Really Won the Victory)",
-    "project": "Tenga Tenga",
-    "date": "2023",
-    "medium": "Photograph on Epson Paper",
-    "dimensions": "24 x 36",
-    "photographer": "Aaron Samuel Mulenga",
-    "image": "victory-colum-ii-who-really-won-the-victory.webp"
   },
   {
     "title": "The Defiant Ones (Brandenburg tor)",
@@ -90,31 +99,22 @@
     "image": "the-defiant-ones-brandenburg-tor.webp"
   },
   {
-    "title": "Nocturnal",
+    "title": "Victory Colum II (Who Really Won the Victory)",
     "project": "Tenga Tenga",
-    "date": "2024",
+    "date": "2023",
     "medium": "Photograph on Epson Paper",
     "dimensions": "24 x 36",
-    "photographer": "Saul Villegas of Moderno",
-    "image": "nocturnal.webp"
+    "photographer": "Aaron Samuel Mulenga",
+    "image": "victory-colum-ii-who-really-won-the-victory.webp"
   },
   {
-    "title": "War is a Terrible Thing. Forgotten but Not Neglected",
+    "title": "A Moment of Silence. Though Lost You Are Not Forgotten",
     "project": "Tenga Tenga",
-    "date": "2024",
+    "date": "2022",
     "medium": "Photograph on Epson Paper",
     "dimensions": "24 x 36",
-    "photographer": "Saul Villegas of Moderno",
-    "image": "war-is-a-terrible-thing-forgotten-but-not-neglected.webp"
-  },
-  {
-    "title": "We Toil For a Brighter Tomorrow",
-    "project": "Tenga Tenga",
-    "date": "2024",
-    "medium": "Photograph on Epson Paper",
-    "dimensions": "24 x 36",
-    "photographer": "Saul Villegas of Moderno",
-    "image": "we-toil-for-a-brighter-tomorrow.webp"
+    "photographer": "Joseph K. Kasau Wa Mambwe",
+    "image": "a-moment-of-silence-though-lost-you-are-not-forgotten.webp"
   },
   {
     "title": "Afronaut Mwamba",
