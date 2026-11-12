@@ -585,6 +585,148 @@ img {
   text-transform: uppercase;
 }
 
+/* ---------- Contact form (about page) ---------- */
+
+.contact {
+  max-width: 38rem;
+  margin-top: 4rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+.contact__heading {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 0.75rem;
+}
+
+.contact__intro {
+  margin: 0 0 2rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.contact__row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0 1.5rem;
+}
+
+@media (min-width: 600px) {
+  .contact__row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.contact__field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.contact__field label {
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.4rem;
+}
+
+.contact__field input,
+.contact__field textarea {
+  font: inherit;
+  font-size: 1rem;
+  color: var(--ink);
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #cfcfcf;
+  border-radius: 0;
+  padding: 0.4rem 0;
+  transition: border-color 0.15s;
+}
+
+.contact__field textarea {
+  resize: vertical;
+  min-height: 8rem;
+  line-height: 1.6;
+}
+
+.contact__field input:focus,
+.contact__field textarea:focus {
+  outline: none;
+  border-bottom-color: var(--ink);
+}
+
+.contact__field input:focus-visible,
+.contact__field textarea:focus-visible {
+  box-shadow: 0 1px 0 0 var(--ink);
+}
+
+.contact__field [aria-invalid="true"] {
+  border-bottom-color: #a33;
+}
+
+.contact__trap {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.contact__actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.contact__submit {
+  font: inherit;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--paper);
+  background: var(--ink);
+  border: 1px solid var(--ink);
+  padding: 0.75rem 1.75rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.contact__submit:hover {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.contact__submit:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.contact__submit:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.contact__status {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.contact__status--success {
+  color: var(--ink);
+}
+
+.contact__status--error {
+  color: #a33;
+}
+
 /* ---------- Listings ---------- */
 
 .entry-list {
