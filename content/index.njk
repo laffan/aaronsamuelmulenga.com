@@ -2,24 +2,67 @@
 layout: base.njk
 section: home
 permalink: /
+# Slides follow Aaron's "Home Page Carousel Images" folder (1 to 10), then the
+# two works that were already in the carousel. "image" looks a work up in
+# projects.json; "src" is a homepage-only photo with its own alt text and link.
 featured:
-  - pillars.webp
-  - afronaut-jojo.webp
-  - intanda-nga-shakumana-when-the-stars-meet.webp
-  - meditate.webp
+  - image: afronaut-mwamba.webp
+  - src: home/02.webp
+    alt: Bronze Afronaut figure
+    href: /exhibitions/#ukupupuka
+  - image: meditate.webp
+  - src: home/04.webp
+    alt: Black and gold cast fists rising from mealie meal
+    href: /exhibitions/#simple-commodities
+  - src: home/05.webp
+    alt: Installation of charcoal sacks and burlap
+    href: /exhibitions/#simple-commodities
+  - image: intanda-nga-shakumana-when-the-stars-meet.webp
+  - src: home/07.webp
+    alt: Three figures in burlap and gold, hands together in prayer
+  - src: home/08.webp
+    alt: Burlap hanging with haloed figures and woven forms
+    href: /exhibitions/#simple-commodities
+  - image: tengatenga-a-sweet-re-imaging-of-historys-narrative.webp
+  - src: home/10.webp
+    alt: Ulupwa
+    href: /exhibitions/#ukupupuka
+  - image: pillars.webp
+  - image: afronaut-jojo.webp
 ---
 
 <div class="slideshow" data-slideshow data-interval="5000" aria-label="Featured works">
-  {%- for filename in featured -%}
-    {%- set project = projects | findByImage(filename) -%}
-    {%- if project -%}
-      <div class="slideshow__slide{% if loop.first %} is-active{% endif %}">
-        <a href="/projects/#{{ project.title | slug }}" aria-label="{{ project.title }}">
-          <img src="/images/{{ project.image }}" alt="{{ project.title }}"{% if not loop.first %} loading="lazy"{% endif %}>
+  {%- set slideIndex = 0 -%}
+  {%- for item in featured -%}
+    {%- set src = "" -%}
+    {%- if item.image -%}
+      {%- set project = projects | findByImage(item.image) -%}
+      {%- if project -%}
+        {%- set src = "/images/" + project.image -%}
+        {%- set alt = project.title -%}
+        {#- Works without a project group are shown in the Ukupupuka exhibition, not on the Projects page. -#}
+        {%- set href = ("/projects/#" + (project.title | slug)) if project.project else "/exhibitions/#ukupupuka" -%}
+      {%- endif -%}
+    {%- elif item.src -%}
+      {%- set src = "/images/" + item.src -%}
+      {%- set alt = item.alt -%}
+      {%- set href = item.href -%}
+    {%- endif -%}
+    {%- if src -%}
+      <div class="slideshow__slide{% if slideIndex == 0 %} is-active{% endif %}">
+        {%- if href %}
+        <a href="{{ href }}" aria-label="{{ alt }}">
+          <img src="{{ src }}" alt="{{ alt }}"{% if slideIndex > 0 %} loading="lazy"{% endif %}>
         </a>
+        {%- else %}
+        <img src="{{ src }}" alt="{{ alt }}"{% if slideIndex > 0 %} loading="lazy"{% endif %}>
+        {%- endif %}
       </div>
+      {%- set slideIndex = slideIndex + 1 -%}
     {%- endif -%}
   {%- endfor -%}
+  <button type="button" class="slideshow__nav slideshow__nav--prev" data-slideshow-prev aria-label="Previous image">&larr;</button>
+  <button type="button" class="slideshow__nav slideshow__nav--next" data-slideshow-next aria-label="Next image">&rarr;</button>
 </div>
 
 <script>
@@ -30,10 +73,23 @@ featured:
     if (slides.length < 2) return;
     var interval = parseInt(root.getAttribute('data-interval'), 10) || 5000;
     var i = 0;
-    setInterval(function () {
+    var timer = null;
+
+    function go(next) {
       slides[i].classList.remove('is-active');
-      i = (i + 1) % slides.length;
+      i = (next + slides.length) % slides.length;
       slides[i].classList.add('is-active');
-    }, interval);
+    }
+
+    function start() {
+      clearInterval(timer);
+      timer = setInterval(function () { go(i + 1); }, interval);
+    }
+
+    // Manual navigation restarts the timer so a click isn't immediately overridden.
+    root.querySelector('[data-slideshow-prev]').addEventListener('click', function () { go(i - 1); start(); });
+    root.querySelector('[data-slideshow-next]').addEventListener('click', function () { go(i + 1); start(); });
+
+    start();
   })();
 </script>

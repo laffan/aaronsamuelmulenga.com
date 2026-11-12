@@ -9,13 +9,13 @@
     "image": "tengatenga-a-sweet-re-imaging-of-historys-narrative.webp"
   },
   {
-    "title": "Remembering the TengaTenga (Lusaka Cenotaph)",
+    "title": "Remembering the Carriers (Mbala Cenotaph)",
     "project": "Tenga Tenga",
-    "date": "2023",
+    "date": "2022",
     "medium": "Photograph on Epson Paper",
     "dimensions": "24 x 36",
-    "photographer": "Maingaila Muvundika",
-    "image": "remembering-the-tengatenga-lusaka-cenotaph.webp"
+    "photographer": "Joseph K. Kasau Wa Mambwe",
+    "image": "remembering-the-carriers-mbala-cenotaph.webp"
   },
   {
     "title": "Freedom! Revising the Intercontinental Memory of War",
@@ -27,6 +27,15 @@
     "image": "freedom-revising-the-intercontinental-memory-of-war.webp"
   },
   {
+    "title": "War is a Terrible Thing. Forgotten but Not Neglected",
+    "project": "Tenga Tenga",
+    "date": "2024",
+    "medium": "Photograph on Epson Paper",
+    "dimensions": "24 x 36",
+    "photographer": "Saul Villegas of Moderno",
+    "image": "war-is-a-terrible-thing-forgotten-but-not-neglected.webp"
+  },
+  {
     "title": "I Will Continue to Cross the Oceans Until I am Known",
     "project": "Tenga Tenga",
     "date": "2024",
@@ -36,76 +45,13 @@
     "image": "i-will-continue-to-cross-the-oceans-until-i-am-known.webp"
   },
   {
-    "title": "A Moment of Silence. Though Lost You Are Not Forgotten",
-    "project": "Tenga Tenga",
-    "date": "2022",
-    "medium": "Photograph on Epson Paper",
-    "dimensions": "24 x 36",
-    "photographer": "Joseph K. Kasau Wa Mambwe",
-    "image": "a-moment-of-silence-though-lost-you-are-not-forgotten.webp"
-  },
-  {
-    "title": "Remembering the Carriers (Mbala Cenotaph)",
-    "project": "Tenga Tenga",
-    "date": "2022",
-    "medium": "Photograph on Epson Paper",
-    "dimensions": "24 x 36",
-    "photographer": "Joseph K. Kasau Wa Mambwe",
-    "image": "remembering-the-carriers-mbala-cenotaph.webp"
-  },
-  {
-    "title": "Life Renewed (We all deserve to Dream)",
-    "project": "Tenga Tenga",
-    "date": "2024",
-    "medium": "Photograph on Epson Paper",
-    "dimensions": "24 x 36",
-    "photographer": "Saul Villegas of Moderno",
-    "image": "life-renewed-we-all-deserve-to-dream.webp"
-  },
-  {
-    "title": "Victory Colum I (Who Really Won the War)",
+    "title": "Remembering the TengaTenga (Lusaka Cenotaph)",
     "project": "Tenga Tenga",
     "date": "2023",
     "medium": "Photograph on Epson Paper",
     "dimensions": "24 x 36",
-    "photographer": "Aaron Samuel Mulenga",
-    "image": "victory-colum-i-who-really-won-the-war.webp"
-  },
-  {
-    "title": "Victory Colum II (Who Really Won the Victory)",
-    "project": "Tenga Tenga",
-    "date": "2023",
-    "medium": "Photograph on Epson Paper",
-    "dimensions": "24 x 36",
-    "photographer": "Aaron Samuel Mulenga",
-    "image": "victory-colum-ii-who-really-won-the-victory.webp"
-  },
-  {
-    "title": "The Defiant Ones (Brandenburg tor)",
-    "project": "Tenga Tenga",
-    "date": "2023",
-    "medium": "Photograph on Epson Paper",
-    "dimensions": "24 x 36",
-    "photographer": "Aaron Samuel Mulenga",
-    "image": "the-defiant-ones-brandenburg-tor.webp"
-  },
-  {
-    "title": "Nocturnal",
-    "project": "Tenga Tenga",
-    "date": "2024",
-    "medium": "Photograph on Epson Paper",
-    "dimensions": "24 x 36",
-    "photographer": "Saul Villegas of Moderno",
-    "image": "nocturnal.webp"
-  },
-  {
-    "title": "War is a Terrible Thing. Forgotten but Not Neglected",
-    "project": "Tenga Tenga",
-    "date": "2024",
-    "medium": "Photograph on Epson Paper",
-    "dimensions": "24 x 36",
-    "photographer": "Saul Villegas of Moderno",
-    "image": "war-is-a-terrible-thing-forgotten-but-not-neglected.webp"
+    "photographer": "Maingaila Muvundika",
+    "image": "remembering-the-tengatenga-lusaka-cenotaph.webp"
   },
   {
     "title": "We Toil For a Brighter Tomorrow",
@@ -117,26 +63,72 @@
     "image": "we-toil-for-a-brighter-tomorrow.webp"
   },
   {
-    "title": "TengaTenga! Can I Help You Carry Your Load?",
+    "title": "Life Renewed (We all deserve to Dream)",
     "project": "Tenga Tenga",
-    "date": "2022",
-    "medium": "Television, burlap sack boxes",
-    "dimensions": "Dimension Variable",
-    "image": "tengatenga-can-i-help-you-carry-your-load.webp"
+    "date": "2024",
+    "medium": "Photograph on Epson Paper",
+    "dimensions": "24 x 36",
+    "photographer": "Saul Villegas of Moderno",
+    "image": "life-renewed-we-all-deserve-to-dream.webp"
   },
   {
-    "title": "The Afronauts",
+    "title": "Nocturnal",
+    "project": "Tenga Tenga",
+    "date": "2024",
+    "medium": "Photograph on Epson Paper",
+    "dimensions": "24 x 36",
+    "photographer": "Saul Villegas of Moderno",
+    "image": "nocturnal.webp"
+  },
+  {
+    "title": "Victory Column I (Who Really Won the War)",
+    "project": "Tenga Tenga",
+    "date": "2023",
+    "medium": "Photograph on Epson Paper",
+    "dimensions": "24 x 36",
+    "photographer": "Aaron Samuel Mulenga",
+    "image": "victory-colum-i-who-really-won-the-war.webp"
+  },
+  {
+    "title": "The Defiant Ones (Brandenburg tor)",
+    "project": "Tenga Tenga",
+    "date": "2023",
+    "medium": "Photograph on Epson Paper",
+    "dimensions": "24 x 36",
+    "photographer": "Aaron Samuel Mulenga",
+    "image": "the-defiant-ones-brandenburg-tor.webp"
+  },
+  {
+    "title": "Victory Column II (Who Really Won the Victory)",
+    "project": "Tenga Tenga",
+    "date": "2023",
+    "medium": "Photograph on Epson Paper",
+    "dimensions": "24 x 36",
+    "photographer": "Aaron Samuel Mulenga",
+    "image": "victory-colum-ii-who-really-won-the-victory.webp"
+  },
+  {
+    "title": "A Moment of Silence. Though Lost You Are Not Forgotten",
+    "project": "Tenga Tenga",
+    "date": "2022",
+    "medium": "Photograph on Epson Paper",
+    "dimensions": "24 x 36",
+    "photographer": "Joseph K. Kasau Wa Mambwe",
+    "image": "a-moment-of-silence-though-lost-you-are-not-forgotten.webp"
+  },
+  {
+    "title": "Afronaut Mwamba",
     "project": "Afronauts",
-    "date": null,
-    "medium": "Acrylic, wax cloth on burlap",
-    "dimensions": null,
-    "image": "the-afronauts.webp"
+    "date": "2017",
+    "medium": "Acrylic paint, wax cloth, burlap sack",
+    "dimensions": "39 x 48\"",
+    "image": "afronaut-mwamba.webp"
   },
   {
     "title": "Afronaut Lombe",
     "project": "Afronauts",
     "date": "2020",
-    "medium": "Acrylic, wax cloth on burlap",
+    "medium": "Acrylic paint, wax cloth, burlap sack",
     "dimensions": "35 x 47\"",
     "image": "afronaut-lombe.webp"
   },
@@ -144,9 +136,49 @@
     "title": "Afronaut Jojo",
     "project": "Afronauts",
     "date": "2021",
-    "medium": "Acrylic, wax cloth on burlap",
+    "medium": "Acrylic paint, wax cloth, burlap sack",
     "dimensions": "39 x 48\"",
     "image": "afronaut-jojo.webp"
+  },
+  {
+    "title": "Afronaut Chikuza",
+    "project": "Afronauts",
+    "date": "2026",
+    "medium": "Acrylic paint, wax cloth, burlap sack",
+    "dimensions": "37 x 50\"",
+    "image": "afronaut-chikuza.webp"
+  },
+  {
+    "title": "Flight Is Better When Done in Tandem",
+    "project": "Afronauts",
+    "date": "2019",
+    "medium": "Fiber filling, burlap sack, coffee and acrylic paint",
+    "dimensions": "87 x 81\"",
+    "image": "flight-is-better-when-done-in-tandem.webp"
+  },
+  {
+    "title": "Maki x Mai",
+    "project": "Afronauts",
+    "date": "2026",
+    "medium": "Acrylic paint on paper",
+    "dimensions": null,
+    "image": "maki-x-mai.webp"
+  },
+  {
+    "title": "From the Ground Up! Ulubuto",
+    "project": "Afronauts",
+    "date": "2021",
+    "medium": "Coffee and acrylic paint on canvas",
+    "dimensions": "71 x 51\"",
+    "image": "from-the-ground-up-ulubuto.webp"
+  },
+  {
+    "title": "The Afronauts",
+    "project": "Afronauts",
+    "date": "2020",
+    "medium": "Digital artwork",
+    "dimensions": null,
+    "image": "the-afronauts.webp"
   },
   {
     "title": "Afronaut Chintelelwe",
@@ -157,22 +189,6 @@
     "image": "afronaut-chintelelwe.webp"
   },
   {
-    "title": "Afronaut Mwamba",
-    "project": "Afronauts",
-    "date": null,
-    "medium": "Acrylic, wax cloth on burlap",
-    "dimensions": null,
-    "image": "afronaut-mwamba.webp"
-  },
-  {
-    "title": "Flight is Better When Done in Tandem",
-    "project": "Afronauts",
-    "date": null,
-    "medium": "Acrylic, wax cloth on burlap",
-    "dimensions": null,
-    "image": "flight-is-better-when-done-in-tandem.webp"
-  },
-  {
     "title": "For Freedom We Dream Until It Happens",
     "project": "Afronauts",
     "date": null,
@@ -181,28 +197,20 @@
     "image": "for-freedom-we-dream-until-it-happens.webp"
   },
   {
-    "title": "From the Ground Up! Ulubuto",
-    "project": "Afronauts",
-    "date": null,
-    "medium": "Acrylic, wax cloth on burlap",
-    "dimensions": null,
-    "image": "from-the-ground-up-ulubuto.webp"
-  },
-  {
-    "title": "Untitled (Afronaut Interaction)",
-    "project": "Afronauts",
-    "date": null,
-    "medium": null,
-    "dimensions": null,
-    "image": "untitled-afronaut-interaction.webp"
-  },
-  {
     "title": "W.I.T.C.H Album Cover",
     "project": "Afronauts",
     "date": null,
     "medium": "Acrylic, wax cloth on burlap",
     "dimensions": null,
     "image": "witch-album-cover.webp"
+  },
+  {
+    "title": "Pillars",
+    "project": "Afronauts",
+    "date": "2023",
+    "medium": "Acrylic and wax cloth on burlap",
+    "dimensions": "97 x 81\"",
+    "image": "pillars.webp"
   },
   {
     "title": "Intanda Nga Shakumana (When the Stars Meet)",
@@ -418,14 +426,6 @@
     "image": "photography-10.webp"
   },
   {
-    "title": "Pillars",
-    "project": "Afronauts",
-    "date": "2023",
-    "medium": "Acrylic and wax cloth on burlap",
-    "dimensions": "97 x 81\"",
-    "image": "pillars.webp"
-  },
-  {
     "title": "Penance",
     "project": null,
     "date": "2024",
@@ -448,14 +448,6 @@
     "medium": "Bronze, wood",
     "dimensions": "23 1/4 x 27 x 13.5\"",
     "image": "ulupwa.webp"
-  },
-  {
-    "title": "Afronaut Banana",
-    "project": "Afronauts",
-    "date": "2024",
-    "medium": "Bronze",
-    "dimensions": null,
-    "image": "afronaut-banana.webp"
   },
   {
     "title": "Matthew 10:16 (Sheep in Wolf's Clothing)",

@@ -165,6 +165,38 @@ img {
   object-fit: contain;
 }
 
+.slideshow__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  background: transparent;
+  border: 0;
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 1.6rem;
+  line-height: 1;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+}
+
+.slideshow__nav:hover {
+  opacity: 0.55;
+}
+
+.slideshow__nav:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.slideshow__nav--prev { left: -3rem; }
+.slideshow__nav--next { right: -3rem; }
+
+@media (max-width: 1000px) {
+  .slideshow__nav--prev { left: 0; }
+  .slideshow__nav--next { right: 0; }
+}
+
 /* ---------- Section nav ---------- */
 
 .section-nav {
@@ -208,7 +240,7 @@ img {
 
 .gallery-section {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 4fr;
   gap: 2rem;
   margin-bottom: 3rem;
   padding-bottom: 3rem;
@@ -249,6 +281,37 @@ img {
   margin: 0 0 0.8rem;
 }
 
+.read-more summary {
+  list-style: none;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 0 0.8rem;
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.read-more summary::-webkit-details-marker {
+  display: none;
+}
+
+.read-more summary:hover {
+  opacity: 0.55;
+}
+
+.read-more__close,
+.read-more[open] .read-more__open {
+  display: none;
+}
+
+.read-more[open] .read-more__close {
+  display: inline;
+}
+
+.gallery-section__credit {
+  font-style: italic;
+}
+
 @media (max-width: 760px) {
   .gallery-section {
     grid-template-columns: 1fr;
@@ -260,8 +323,8 @@ img {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
-  gap: 3rem 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem 0.625rem;
 }
 
 .gallery--video {
@@ -324,7 +387,8 @@ img {
 }
 
 .gallery__caption {
-  margin-top: 0.85rem;
+  margin-top: 0.6rem;
+  text-align: center;
   font-size: 0.82rem;
   line-height: 1.45;
 }
@@ -389,26 +453,33 @@ img {
   display: none;
 }
 
+/* The figure fills the padded viewport. The image takes whatever height is
+   left after the caption, so the title and the materials line always show. */
 .lightbox__figure {
   margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 1.25rem;
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
 }
 
 .lightbox__image,
 .lightbox__video {
+  flex: 0 1 auto;
+  min-height: 0;
   max-width: 100%;
-  max-height: calc(100vh - 12rem);
+  max-height: 100%;
   width: auto;
   height: auto;
   object-fit: contain;
 }
 
 .lightbox__caption {
+  flex: none;
   text-align: center;
   font-size: 0.85rem;
   line-height: 1.5;
@@ -460,7 +531,7 @@ img {
   .lightbox__nav { top: auto; bottom: 1rem; transform: none; }
   .lightbox__nav--prev { left: 1rem; }
   .lightbox__nav--next { right: 1rem; }
-  .lightbox__image { max-height: calc(100vh - 14rem); }
+  .lightbox { padding-bottom: 4.5rem; }
 }
 
 /* ---------- Prose (about, news, exhibitions) ---------- */
@@ -512,6 +583,148 @@ img {
   font-size: 0.8rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+/* ---------- Contact form (about page) ---------- */
+
+.contact {
+  max-width: 38rem;
+  margin-top: 4rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+.contact__heading {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 0.75rem;
+}
+
+.contact__intro {
+  margin: 0 0 2rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.contact__row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0 1.5rem;
+}
+
+@media (min-width: 600px) {
+  .contact__row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.contact__field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.contact__field label {
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.4rem;
+}
+
+.contact__field input,
+.contact__field textarea {
+  font: inherit;
+  font-size: 1rem;
+  color: var(--ink);
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #cfcfcf;
+  border-radius: 0;
+  padding: 0.4rem 0;
+  transition: border-color 0.15s;
+}
+
+.contact__field textarea {
+  resize: vertical;
+  min-height: 8rem;
+  line-height: 1.6;
+}
+
+.contact__field input:focus,
+.contact__field textarea:focus {
+  outline: none;
+  border-bottom-color: var(--ink);
+}
+
+.contact__field input:focus-visible,
+.contact__field textarea:focus-visible {
+  box-shadow: 0 1px 0 0 var(--ink);
+}
+
+.contact__field [aria-invalid="true"] {
+  border-bottom-color: #a33;
+}
+
+.contact__trap {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.contact__actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.contact__submit {
+  font: inherit;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--paper);
+  background: var(--ink);
+  border: 1px solid var(--ink);
+  padding: 0.75rem 1.75rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.contact__submit:hover {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.contact__submit:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.contact__submit:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.contact__status {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.contact__status--success {
+  color: var(--ink);
+}
+
+.contact__status--error {
+  color: #a33;
 }
 
 /* ---------- Listings ---------- */
